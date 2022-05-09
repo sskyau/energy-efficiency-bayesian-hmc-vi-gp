@@ -56,6 +56,7 @@ def gradient_check(x0, fn_error, fn_grad, *args):
     x = x0.copy()
     grad = fn_grad(x, *args)
     gnum = np.empty(N)
+    print("HIIII")
     #
     print('{0:13s} {1:13s} {2:13s} Acc.'.format('Calc.', 'Numeric', 'Delta'))
     for n in range(N):
@@ -66,6 +67,7 @@ def gradient_check(x0, fn_error, fn_grad, *args):
         x[n] += delt
         #
         gnum[n] = (fplus-fminus)/(2*delt)
+        print('gnum: ', gnum[n])
         differ = gnum[n]-grad[n]
         if differ == 0:
             one_part_in = 16
@@ -148,6 +150,7 @@ def sample(x, energy_func, energy_grad, R, L, epsilon0, burn=0,
     :return: 2D array of samples, one per row
     """
     #
+    print('ALOHA')
     if checkgrad:
         gradient_check(x, energy_func, energy_grad,  *args)
     #
