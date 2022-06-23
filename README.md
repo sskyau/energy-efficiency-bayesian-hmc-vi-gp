@@ -2,6 +2,8 @@
 
 This is the final project for CM50268 Bayesian Machine Learning (Semester 2, 2022) at the University of Bath.
 
+Grade: 79% - Distinction
+
 ## Objective
 
 The goal of the project is to estimate the heating load of buildings given 8 architectural parameters listed below:
